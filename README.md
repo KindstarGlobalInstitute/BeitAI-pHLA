@@ -36,4 +36,4 @@ A peptide-HLA Binding Estimation using Immune Technology of Artificial Intellige
 
 ## Support
 
-If you have any questions or need further assistance, please contact [qsg6038@163.com] or visit the [GitHub Issues] page.
+If you have any questions or need further assistance, please contact [qiushigang@kindstar.com.cn] or visit the [GitHub Issues] page.

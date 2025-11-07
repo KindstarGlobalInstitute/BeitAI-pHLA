@@ -1,0 +1,1 @@
+Download the model weight file from https://drive.google.com/drive/folders/1TZ5crvmMiKCRJLJsdYxzrU89jTVMh7ERand and put it in `model_file/`.

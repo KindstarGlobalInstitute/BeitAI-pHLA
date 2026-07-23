@@ -4,7 +4,6 @@ A peptide-HLA Binding Estimation using Immune Technology of Artificial Intellige
 
 This repository implements a **Multiple Instance Learning (MIL)** approach for predicting peptide-HLA binding affinity. The model uses ESM-2 for peptide/MHC pseudo-sequence embedding, followed by DPCNN + CapsNet feature extraction and MIL-based attention pooling for multi-allele scenarios.
 
----
 
 ## Requirements
 
@@ -15,7 +14,6 @@ This repository implements a **Multiple Instance Learning (MIL)** approach for p
 - pytorch-cuda == 12.1
 - fair-esm == 2.0.0
 
----
 
 ## Installation
 
@@ -36,7 +34,6 @@ This repository implements a **Multiple Instance Learning (MIL)** approach for p
 
 > **Note:** The first run will automatically download ESM-2 weights. This may take a few minutes depending on your network connection. Subsequent runs will use the cached weights.
 
----
 
 ## Data & Model Weights
 
@@ -46,10 +43,9 @@ Due to size constraints, the following files are **not** included in this reposi
 |-------|----------|------|
 | Model checkpoints (3 splits) | [Google Drive](https://drive.google.com/drive/folders/1TZ5crvmMiKCRJLJsdYxzrU89jTVMh7ER) | ~1.8 GB |
 | Training and testing data | [Google Drive](https://drive.google.com/drive/folders/1TZ5crvmMiKCRJLJsdYxzrU89jTVMh7ER) | ~1 GB |
------------------------
+
 The small auxiliary files (allele mapping, pseudo-sequences, example data) are included in `data_random/`.
 
----
 
 ## Usage
 
@@ -109,7 +105,6 @@ AIVDDAIEKL	HLA-A02:01	0.8732
 FPQMGRFTL	HLA-A03:01,HLA-B18:05,HLA-C04:01	0.6541
 ```
 
----
 
 ### Seq2Logo (Motif Visualization)
 
@@ -134,7 +129,6 @@ To generate sequence logo plots from predicted binding peptides, you can use [Se
    python_path = '~/anaconda3/envs/python2.7/bin/python'  # Update this path
    ```
 
----
 
 ### Ablation Experiments
 

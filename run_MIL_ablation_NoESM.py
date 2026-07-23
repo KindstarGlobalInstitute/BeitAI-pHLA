@@ -55,7 +55,7 @@ def main():
     MHC_pseudo_dict = get_pseudo_dict()
 
     model = MHCpre_model_MIL_Capsule2_NoESM()
-    ckpt_path = "./model_MIL/EL_Classification_ablation_NoESM_split0.ckpt"
+    ckpt_path = "./model_MIL/EL_Classification_ablation_NoESM.ckpt"
     model.load_state_dict(torch.load(ckpt_path, map_location=device))
     model = model.to(device)
     model.eval()

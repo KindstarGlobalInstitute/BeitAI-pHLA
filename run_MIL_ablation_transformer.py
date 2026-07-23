@@ -58,7 +58,7 @@ def main():
     emb_model, _ = esm.pretrained.esm2_t30_150M_UR50D()
     model = MHCpre_model_MIL_Capsule2_Transformer(emb_model,device=device)
 
-    ckpt_path = "./model_MIL/EL_Classification_ablation_transformer2_split0.ckpt"
+    ckpt_path = "./model_MIL/EL_Classification_ablation_transformer.ckpt"
     model.load_state_dict(torch.load(ckpt_path, map_location=device))
     for p in emb_model.parameters():
         p.requires_grad = False

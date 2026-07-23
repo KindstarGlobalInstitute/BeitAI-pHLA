@@ -57,7 +57,7 @@ def main():
     # ========== ESM 模型 (t30, 640-dim) ==========
     emb_model, _ = esm.pretrained.esm2_t30_150M_UR50D()
     model = MHCpre_model_MIL_Capsule2_NoMIL(emb_model)
-    ckpt_path = "./model_MIL/EL_Classification_ablation_NoMIL_split0.ckpt"
+    ckpt_path = "./model_MIL/EL_Classification_ablation_NoMIL.ckpt"
     model.load_state_dict(torch.load(ckpt_path, map_location=device))
     for p in emb_model.parameters():
         p.requires_grad = False

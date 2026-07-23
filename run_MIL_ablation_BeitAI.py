@@ -48,7 +48,7 @@ def main():
     emb_model, _ = esm.pretrained.esm2_t30_150M_UR50D()
     model = MHCpre_model_MIL_Capsule2(emb_model)
 
-    ckpt_path = "./model_MIL/EL_Classification_train_0626_split0.ckpt"
+    ckpt_path = "./model_MIL/EL_Classification_train_split0.ckpt"
     state_dict = torch.load(ckpt_path, map_location=device)
     state_dict = {k.replace('caps_net1.', 'caps_net.'): v for k, v in state_dict.items()}
     model.load_state_dict(state_dict, strict=False)

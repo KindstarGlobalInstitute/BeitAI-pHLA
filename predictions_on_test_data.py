@@ -59,7 +59,7 @@ def _ma_worker(gpu_id, file_names, temp_dir, model_dir, output_dir, input_dir):
     for split_idx in [0, 1, 2]:
         print(f'[GPU {gpu_id}] Loading split {split_idx} checkpoint ...')
         model = MHCpre_model_MIL_Capsule2(emb_model)
-        ckpt_path = os.path.join(model_dir, f'EL_Classification_train_0626_split{split_idx}.ckpt')
+        ckpt_path = os.path.join(model_dir, f'EL_Classification_train_split{split_idx}.ckpt')
         state_dict = torch.load(ckpt_path, map_location=device)
         state_dict = {k.replace('caps_net1.', 'caps_net.'): v for k, v in state_dict.items()}
         state_dict = {k.replace('fc.0.', 'fc_feat.0.'): v for k, v in state_dict.items()}
@@ -283,7 +283,7 @@ def predict_nature_SA(output_dir):
         print(f'{"=" * 50}')
 
         model = MHCpre_model_MIL_Capsule2(emb_model)
-        ckpt_path = os.path.join(model_dir, f'EL_Classification_train_0626_split{split_idx}.ckpt')
+        ckpt_path = os.path.join(model_dir, f'EL_Classification_train_split{split_idx}.ckpt')
         state_dict = torch.load(ckpt_path, map_location=DEVICE)
         state_dict = {k.replace('caps_net1.', 'caps_net.'): v for k, v in state_dict.items()}
         state_dict = {k.replace('fc.0.', 'fc_feat.0.'): v for k, v in state_dict.items()}
